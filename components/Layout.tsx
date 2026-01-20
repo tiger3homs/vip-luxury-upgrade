@@ -17,9 +17,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Models', path: '/shop' },
-    { name: 'Exclusive', path: '/sale' },
-    { name: 'Editorial', path: '/about' },
+    { name: 'Inventory', path: '/shop' },
+    { name: 'Financing', path: '/financing' },
+    { name: 'Trade-In', path: '/trade-in' },
+    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -44,8 +45,16 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center space-x-6">
-          <span className="hidden md:block text-xs font-bold text-brand-muted cursor-pointer hover:text-white transition-colors">EN / DE</span>
+        <div className="flex items-center space-x-4">
+          <Link 
+            to="/favorites" 
+            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-red-500 hover:text-red-500 transition-colors text-white/60"
+            title="Favorites"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </Link>
           <Link to="/admin/login" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-brand-yellow hover:text-brand-yellow transition-colors text-white/60">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </Link>
