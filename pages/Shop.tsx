@@ -295,13 +295,47 @@ export const Shop: React.FC = () => {
                 : 'grid-cols-1'
             }`}>
               {cars.map((car) => (
-                <CarCard
-                  key={car.id}
-                  car={car}
-                  variant={view === 'list' ? 'horizontal' : 'default'}
-                  onFavorite={handleFavorite}
-                  isFavorite={favorites.has(car.id)}
-                />
+                <div key={car.id} className="relative">
+                  {/* Comparison Checkbox */}
+                  <div className="absolute top-4 right-4 z-30">
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        if (isInComparison(car.id)) {
+                          handleRemoveFromComparison(car.id);
+                        } else {
+                          handleAddToComparison(car);
+                        }
+                      }}
+                      className={`w-10 h-10 rounded-full backdrop-blur flex items-center justify-center transition-all ${
+                        isInComparison(car.id)
+                          ? 'bg-brand-gold text-brand-black shadow-gold-glow'
+                          : 'bg-brand-black/60 border border-white/20 hover:border-brand-gold text-white/60 hover:text-brand-gold'
+                      }`}
+                      title={isInComparison(car.id) ? 'Remove from comparison' : 'Add to comparison'}
+                    >
+                      {isInComparison(car.id) ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 20V10"></path>
+                          <path d="M12 20V4"></path>
+                          <path d="M6 20v-6"></path>
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                  
+                  <CarCard
+                    car={car}
+                    variant={view === 'list' ? 'horizontal' : 'default'}
+                    onFavorite={handleFavorite}
+                    isFavorite={favorites.has(car.id)}
+                  />
+                </div>
               ))}
             </div>
           )}
