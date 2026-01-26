@@ -16,6 +16,8 @@ export const Shop: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<'grid' | 'list'>('grid');
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [comparisonCars, setComparisonCars] = useState<Car[]>([]);
+  const [showComparison, setShowComparison] = useState(false);
 
   // Parse filters from URL
   const filters: CarFilters = useMemo(() => ({
