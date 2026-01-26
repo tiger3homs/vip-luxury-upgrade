@@ -307,12 +307,12 @@ export const QuickSearchBar: React.FC<{
   };
 
   return (
-    <form onSubmit={handleSearch} className="bg-brand-black/90 backdrop-blur-lg border border-white/10 p-6">
+    <form onSubmit={handleSearch} className="glass-morph-gold backdrop-blur-lg border border-brand-gold/20 p-6 shadow-gold-glow">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <select
           value={brand}
           onChange={(e) => setBrand(e.target.value)}
-          className="bg-brand-gray border border-white/20 p-4 text-white focus:border-brand-yellow outline-none"
+          className="bg-brand-gray border border-white/20 p-4 text-white focus:border-brand-gold outline-none transition-colors"
         >
           <option value="">All Brands</option>
           {CAR_BRANDS.map((b) => (
