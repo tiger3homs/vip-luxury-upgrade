@@ -390,7 +390,7 @@ export const ViewToggle: React.FC<{
     <div className="flex border border-white/20">
       <button
         onClick={() => onChange('grid')}
-        className={`p-2 transition-colors ${view === 'grid' ? 'bg-brand-yellow text-brand-black' : 'text-white/60 hover:text-white'}`}
+        className={`p-2 transition-colors ${view === 'grid' ? 'bg-brand-gold text-brand-black' : 'text-white/60 hover:text-brand-gold'}`}
         title="Grid view"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
