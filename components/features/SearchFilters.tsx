@@ -44,17 +44,17 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
   ).length;
 
   return (
-    <div className="bg-brand-gray/20 border border-white/10">
+    <div className="glass-morph border border-white/10 shadow-premium">
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
         <div className="flex items-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-yellow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-gold">
             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
           </svg>
           <span className="text-sm font-bold uppercase tracking-widest text-white">
             Filters
             {activeFiltersCount > 0 && (
-              <span className="ml-2 px-2 py-0.5 bg-brand-yellow text-brand-black text-xs rounded-full">
+              <span className="ml-2 px-2 py-0.5 bg-brand-gold text-brand-black text-xs rounded-full font-bold">
                 {activeFiltersCount}
               </span>
             )}
@@ -64,14 +64,14 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           {activeFiltersCount > 0 && (
             <button
               onClick={onReset}
-              className="text-xs text-brand-muted hover:text-white transition-colors uppercase tracking-widest"
+              className="text-xs text-brand-muted hover:text-brand-gold transition-colors uppercase tracking-widest font-bold"
             >
               Clear All
             </button>
           )}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-brand-muted hover:text-white transition-colors"
+            className="text-brand-muted hover:text-brand-gold transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
