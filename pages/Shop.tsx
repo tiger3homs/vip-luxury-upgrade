@@ -8,6 +8,7 @@ import { supabase, Car, CarFilters } from '../services/supabase';
 import { SEO } from '../components/SEO';
 import { CarCard, CarCardSkeleton } from '../components/features/CarCard';
 import { SearchFilters, SortDropdown, ViewToggle } from '../components/features/SearchFilters';
+import { CarComparison, ComparisonWidget } from '../components/features/CarComparison';
 
 export const Shop: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
