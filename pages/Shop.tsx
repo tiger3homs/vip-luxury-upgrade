@@ -160,6 +160,26 @@ export const Shop: React.FC = () => {
     });
   };
 
+  // Comparison handlers
+  const handleAddToComparison = (car: Car) => {
+    if (comparisonCars.length < 3 && !comparisonCars.find(c => c.id === car.id)) {
+      setComparisonCars([...comparisonCars, car]);
+    }
+  };
+
+  const handleRemoveFromComparison = (carId: string) => {
+    setComparisonCars(comparisonCars.filter(c => c.id !== carId));
+  };
+
+  const handleClearComparison = () => {
+    setComparisonCars([]);
+    setShowComparison(false);
+  };
+
+  const isInComparison = (carId: string) => {
+    return comparisonCars.some(c => c.id === carId);
+  };
+
   return (
     <div className="min-h-screen bg-brand-black pt-20">
       <SEO
