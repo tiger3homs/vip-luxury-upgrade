@@ -333,7 +333,7 @@ export const QuickSearchBar: React.FC<{
         </select>
 
         <select
-          className="bg-brand-gray border border-white/20 p-4 text-white focus:border-brand-yellow outline-none"
+          className="bg-brand-gray border border-white/20 p-4 text-white focus:border-brand-gold outline-none transition-colors"
         >
           <option value="">Any Year</option>
           <option value="2024">2024 or newer</option>
