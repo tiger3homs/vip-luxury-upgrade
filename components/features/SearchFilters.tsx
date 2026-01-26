@@ -343,13 +343,15 @@ export const QuickSearchBar: React.FC<{
 
         <button
           type="submit"
-          className="bg-brand-yellow text-brand-black font-bold uppercase tracking-widest p-4 hover:bg-brand-yellowHover transition-colors flex items-center justify-center gap-2"
+          className="bg-brand-gold text-brand-black font-bold uppercase tracking-widest p-4 hover:bg-brand-goldLight transition-colors flex items-center justify-center gap-2 btn-premium"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.3-4.3"></path>
-          </svg>
-          Search
+          <span className="relative z-10 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            Search
+          </span>
         </button>
       </div>
     </form>
