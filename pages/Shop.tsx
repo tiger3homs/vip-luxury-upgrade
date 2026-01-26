@@ -188,29 +188,35 @@ export const Shop: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <Section className="py-16 bg-brand-black relative">
+      <Section className="py-20 bg-brand-black relative">
+        <div className="absolute inset-0 bg-premium-glow opacity-20" />
         <GridBackground opacity={0.05} />
         <Container>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 animate-fade-in-up">
             <div>
-              <Label className="mb-4 block">Inventory</Label>
+              <Label className="mb-4 block text-brand-gold">
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-12 h-[2px] bg-brand-gold"></span>
+                  Premium Inventory
+                </span>
+              </Label>
               <Heading as="h1">
-                Available <span className="text-brand-yellow">Vehicles</span>
+                Available <span className="text-gold-metallic">Collection</span>
               </Heading>
-              <p className="text-brand-muted mt-4 max-w-xl">
+              <p className="text-brand-muted mt-4 max-w-xl leading-relaxed">
                 Discover our curated collection of exceptional automobiles. Each vehicle has been 
-                carefully selected and inspected to meet our exacting standards.
+                carefully selected and inspected to meet our exacting standards of luxury and performance.
               </p>
             </div>
             
             {/* Quick stats */}
-            <div className="flex gap-8">
+            <div className="flex gap-8 animate-fade-in-up stagger-1">
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-white">{cars.length}</div>
+                <div className="text-4xl font-display font-bold text-gold-metallic">{cars.length}</div>
                 <div className="text-xs text-brand-muted uppercase tracking-widest">Vehicles</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-brand-yellow">
+                <div className="text-4xl font-display font-bold text-silver-chrome">
                   {new Set(cars.map(c => c.brand)).size}
                 </div>
                 <div className="text-xs text-brand-muted uppercase tracking-widest">Brands</div>
