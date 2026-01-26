@@ -200,8 +200,8 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
                   onClick={() => toggleArrayFilter('bodyType', value)}
                   className={`px-4 py-2 text-xs uppercase tracking-widest font-bold border transition-all ${
                     filters.bodyType?.includes(value)
-                      ? 'bg-brand-yellow text-brand-black border-brand-yellow'
-                      : 'bg-transparent text-white/60 border-white/20 hover:border-white hover:text-white'
+                      ? 'bg-brand-gold text-brand-black border-brand-gold shadow-gold-glow'
+                      : 'bg-transparent text-white/60 border-white/20 hover:border-brand-gold hover:text-brand-gold'
                   }`}
                 >
                   {label}
