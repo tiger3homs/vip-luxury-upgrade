@@ -8,7 +8,6 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { CarDetail } from './pages/CarDetail';
 import { Favorites } from './pages/Favorites';
-import { Financing } from './pages/Financing';
 import { TradeIn } from './pages/TradeIn';
 import { AdminLogin } from './pages/AdminLogin';
 import { AdminDashboard } from './pages/AdminDashboard';
