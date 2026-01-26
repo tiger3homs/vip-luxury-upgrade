@@ -323,7 +323,7 @@ export const QuickSearchBar: React.FC<{
         <select
           value={maxPrice}
           onChange={(e) => setMaxPrice(e.target.value)}
-          className="bg-brand-gray border border-white/20 p-4 text-white focus:border-brand-yellow outline-none"
+          className="bg-brand-gray border border-white/20 p-4 text-white focus:border-brand-gold outline-none transition-colors"
         >
           <option value="">Any Price</option>
           <option value="100000">Up to CHF 100k</option>
