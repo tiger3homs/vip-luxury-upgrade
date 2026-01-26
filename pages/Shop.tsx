@@ -379,10 +379,9 @@ export const Shop: React.FC = () => {
       {/* Comparison Widget */}
       {comparisonCars.length > 0 && (
         <ComparisonWidget
-          cars={comparisonCars}
-          onRemove={handleRemoveFromComparison}
-          onClear={handleClearComparison}
+          selectedCars={comparisonCars}
           onCompare={() => setShowComparison(true)}
+          onClear={handleClearComparison}
         />
       )}
 
@@ -390,8 +389,8 @@ export const Shop: React.FC = () => {
       {showComparison && (
         <CarComparison
           cars={comparisonCars}
-          onClose={() => setShowComparison(false)}
           onRemove={handleRemoveFromComparison}
+          onClear={handleClearComparison}
         />
       )}
     </div>
