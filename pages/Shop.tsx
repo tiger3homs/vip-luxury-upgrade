@@ -375,6 +375,25 @@ export const Shop: React.FC = () => {
           </div>
         </Container>
       </Section>
+
+      {/* Comparison Widget */}
+      {comparisonCars.length > 0 && (
+        <ComparisonWidget
+          cars={comparisonCars}
+          onRemove={handleRemoveFromComparison}
+          onClear={handleClearComparison}
+          onCompare={() => setShowComparison(true)}
+        />
+      )}
+
+      {/* Comparison Modal */}
+      {showComparison && (
+        <CarComparison
+          cars={comparisonCars}
+          onClose={() => setShowComparison(false)}
+          onRemove={handleRemoveFromComparison}
+        />
+      )}
     </div>
   );
 };
