@@ -124,7 +124,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           <select
             value={filters.maxPrice || ''}
             onChange={(e) => updateFilter('maxPrice', e.target.value ? Number(e.target.value) : undefined)}
-            className="w-full bg-brand-black border border-white/20 p-3 text-white focus:border-brand-yellow outline-none"
+            className="w-full bg-brand-black border border-white/20 p-3 text-white focus:border-brand-gold outline-none"
           >
             <option value="">No Limit</option>
             <option value="50000">Up to CHF 50,000</option>
