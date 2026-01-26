@@ -97,7 +97,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           <select
             value={filters.brand || ''}
             onChange={(e) => updateFilter('brand', e.target.value || undefined)}
-            className="w-full bg-brand-black border border-white/20 p-3 text-white focus:border-brand-yellow outline-none"
+            className="w-full bg-brand-black border border-white/20 p-3 text-white focus:border-brand-gold focus:outline-none transition-colors"
           >
             <option value="">All Brands</option>
             {CAR_BRANDS.map((brand) => (
