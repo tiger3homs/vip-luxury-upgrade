@@ -278,7 +278,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           <span className="text-sm text-brand-muted">
             {isLoading ? (
               <span className="flex items-center gap-2">
-                <div className="w-4 h-4 border-2 border-brand-yellow border-t-transparent rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-brand-gold border-t-transparent rounded-full animate-spin" />
                 Searching...
               </span>
             ) : (
