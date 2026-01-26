@@ -114,7 +114,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
             placeholder="Any Model"
             value={filters.model || ''}
             onChange={(e) => updateFilter('model', e.target.value || undefined)}
-            className="w-full bg-brand-black border border-white/20 p-3 text-white focus:border-brand-yellow outline-none placeholder:text-white/30"
+            className="w-full bg-brand-black border border-white/20 p-3 text-white focus:border-brand-gold outline-none placeholder:text-white/30"
           />
         </div>
 
