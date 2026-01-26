@@ -367,7 +367,7 @@ export const SortDropdown: React.FC<{
       <select
         value={value || 'newest'}
         onChange={(e) => onChange(e.target.value as CarFilters['sortBy'])}
-        className="bg-brand-black border border-white/20 px-4 py-2 text-sm text-white focus:border-brand-yellow outline-none"
+        className="bg-brand-black border border-white/20 px-4 py-2 text-sm text-white focus:border-brand-gold outline-none transition-colors"
       >
         <option value="newest">Newest First</option>
         <option value="price_asc">Price: Low to High</option>
